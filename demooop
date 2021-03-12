@@ -1,13 +1,15 @@
-//
-// main.cpp
-// OOP_DEMO_CAR
-//
-// Created by wpfang on 2021/3/8.
-// Copyright © 2021 wpfang. All rights reserved.
-//
+/**
+ * teacher's example .
+ *
+ * This is the typical JavaDoc-style C-style comment. It starts with two
+ * asterisks.
+ *
+ * 
+ */
 #include <iostream>
 #include <string>
 using namespace std;
+
 class CCAR {
 private:
 string nickname;
