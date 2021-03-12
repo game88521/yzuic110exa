@@ -8,6 +8,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
+/**設定一個CCAR類別*/
 class CCAR {
 private:
 string nickname;
@@ -20,12 +22,14 @@ CCAR() :light(2)
 wheel = 5;
 cout << "car's constructor(wheel=" << wheel << ")" << endl;
 }
+/**建構子*/
 CCAR(string nickname) :light(2)
 {
 wheel = 5;
 this->nickname = nickname;
 cout << "car's constructor(nickname=" << nickname << ")" << endl;
 }
+/**解構子*/
 ~CCAR()
 {
 cout << "car's destructor" << "(" << nickname << ")" << endl;
@@ -44,14 +48,18 @@ cout << "car's turn" << endl;
 }
 };
 //--------------------------
+/**CBMW公開繼承CCAR的內容*/
 class CBMW : public CCAR {
 public:
+/**從父類別繼承的參數*/
 CBMW() { light = 4; wheel = 4; cout << "bmw's constructor" << endl; }
 ~CBMW() { cout << "bmw's destructor" << endl; }
+/**新增一個名為Abs的函式*/
 void Abs()
 {
 cout << "bmw's abs" << endl;
 }
+/**修改CCAR中的start函式*/
 void start()
 {
 cout << "bmw's start" << endl;
